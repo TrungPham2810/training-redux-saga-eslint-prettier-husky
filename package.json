@@ -9,7 +9,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "lint-staged": "^10.0.8",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
@@ -44,6 +43,22 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js, css}": [
+       "eslint src",
+      "npm run format",
+      "git add ."
+    ]
+     
+    
+    
   }
 }

@@ -9,9 +9,10 @@ import Fab from "@material-ui/core/Fab";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Grid from "@material-ui/core/Grid";
+import PropTypes from "prop-types";
 class TaskItem extends Component {
   render() {
-    var { task, label, classes } = this.props;
+    var { task, label, classes, onClickEdit, onClickDelete } = this.props;
     return (
       <Card className={classes.taskItem}>
         <CardContent>
@@ -26,10 +27,10 @@ class TaskItem extends Component {
           </Grid>
         </CardContent>
         <CardActions className={classes.fab}>
-          <Fab color="primary" size="small" aria-label="delete">
+          <Fab color="primary" size="small" onClick={onClickDelete} aria-label="delete">
             <DeleteIcon />
           </Fab>
-          <Fab color="secondary" size="small" aria-label="edit">
+          <Fab color="secondary" size="small" onClick={onClickEdit} aria-label="edit">
             <EditIcon />
           </Fab>
         </CardActions>
@@ -38,4 +39,11 @@ class TaskItem extends Component {
   }
 }
 
+TaskItem.propTypes = {
+    classes: PropTypes.object,
+    task: PropTypes.object,
+    label: PropTypes.string,
+    onClickEdit: PropTypes.func,
+    onClickDelete: PropTypes.func,
+}
 export default withStyles(styles)(TaskItem);

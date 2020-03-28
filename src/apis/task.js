@@ -8,8 +8,6 @@ export const getList = (params = {}) => {
     if(Object.keys(params).length >0) {
         urlParams = `?${qs.stringify(params)}`;
     }
-    console.log(urlParams);
-
     return axiosService.get(`${API_URL}/${url}${urlParams}`);
 }
 // http://localhost:3000/task      POST

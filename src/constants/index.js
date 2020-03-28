@@ -1,9 +1,5 @@
-import React from 'react';
 import AdminHomePage from './../containers/AdminHomePage'
 import Taskboard from '../containers/Taskboard';
-import Test from '../containers/Test';
-import Header from '../components/DashBoard/Header';
-
 export const API_URL = 'http://localhost:3000';
 export const STATUSES = [
   {

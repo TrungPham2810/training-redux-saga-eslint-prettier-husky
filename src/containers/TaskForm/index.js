@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
 import { Grid } from "@material-ui/core";
 import styles from "./styles";
-import { withStyles } from "@material-ui/styles";
+import { withStyles } from '@material-ui/core/styles';
 import Box from "@material-ui/core/Box";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -86,10 +86,8 @@ class TaskForm extends Component {
             handleSubmit,
             invalid,
             submitting,
-
         } = this.props;
         const { hideModal } = modalActionsCreator;
-
         return (
             <form onSubmit={handleSubmit(this.handleSubmitForm)}>
                 <Grid container>

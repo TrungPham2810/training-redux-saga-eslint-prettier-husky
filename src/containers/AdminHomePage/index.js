@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import { withStyles } from '@material-ui/styles'
+import { withStyles } from '@material-ui/core/styles';
 import styles from './styles'
 
 class AdminHomePage extends Component {
     render() {
-        console.log(this.props);
-
         return (
             <div>
                 <h1>Welcome AdminHomePage</h1>

@@ -15,7 +15,6 @@ import { STATUS_CODE, STATUSES } from "./../constants/index";
 import {
     fetchListTaskSuccess,
     fetchListTaskFalse,
-    filterTaskSuccess,
     fetchResetListTask,
     addTaskSuccess,
     addTaskFalse,

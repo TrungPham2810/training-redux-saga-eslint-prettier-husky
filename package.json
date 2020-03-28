@@ -58,7 +58,6 @@
   "lint-staged": {
     "*.{js,css}": [
 
-      "git add ."
     ]
   },
   "husky": {

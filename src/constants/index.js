@@ -1,8 +1,10 @@
+import React from 'react';
 import AdminHomePage from './../containers/AdminHomePage'
 import Taskboard from '../containers/Taskboard';
+import Test from '../containers/Test';
+import Header from '../components/DashBoard/Header';
 
 export const API_URL = 'http://localhost:3000';
-
 export const STATUSES = [
   {
     value: 0,
@@ -26,18 +28,16 @@ export const STATUS_CODE = {
 
 export const ADMIN_ROUTES = [
     {
+        path:'/task',
+        name: 'Manage Tasks',
+        component: Taskboard
+
+    },
+    {
         path:'/',
         name: 'Admin Home',
         exact:true,
         component: AdminHomePage
-
-    },
-
-    {
-        path:'/task',
-        name: 'Manage Tasks',
-        exact:true,
-        component: Taskboard
 
     },
 ]

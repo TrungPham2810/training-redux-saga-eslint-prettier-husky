@@ -4,6 +4,8 @@ import styles from './styles'
 
 class AdminHomePage extends Component {
     render() {
+        console.log(this.props);
+
         return (
             <div>
                 <h1>Welcome AdminHomePage</h1>

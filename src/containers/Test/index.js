@@ -19,7 +19,7 @@ import * as modalActions from "../../actions/modal";
 import PropTypes from "prop-types";
 import { Box } from "@material-ui/core";
 
-class Taskboard extends Component {
+class Test extends Component {
     componentDidMount() {
         const { taskActionCreators } = this.props;
         const { fetchResetListTask } = taskActionCreators;
@@ -144,6 +144,7 @@ class Taskboard extends Component {
     renderSearchBox = () => {
         let xhtml = null;
         xhtml = <SearchBox handleChange={this.handleChange} />;
+
         return xhtml;
     };
 
@@ -175,7 +176,7 @@ class Taskboard extends Component {
     }
 }
 
-Taskboard.propTypes = {
+Test.propTypes = {
     classes: PropTypes.object,
     taskActionCreators: PropTypes.shape({
         fetchResetListTask: PropTypes.func,
@@ -205,5 +206,5 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 export default withStyles(styles)(
-    connect(mapStateToProps, mapDispatchToProps)(Taskboard)
+    connect(mapStateToProps, mapDispatchToProps)(Test)
 );

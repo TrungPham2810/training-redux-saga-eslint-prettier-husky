@@ -1,5 +1,7 @@
 import AdminHomePage from "../containers/AdminHomePage";
 import Taskboard from "../containers/Taskboard";
+import LoginPage from "../containers/LoginPage";
+import SignUpPage from "../containers/SignUpPage";
 
 export const API_URL = "http://localhost:3000";
 export const STATUSES = [
@@ -25,14 +27,27 @@ export const STATUS_CODE = {
 
 export const ADMIN_ROUTES = [
     {
-        path: "/task",
+        path: "/admin/task",
         name: "Manage Tasks",
         component: Taskboard
     },
     {
-        path: "/",
+        path: "/admin",
         name: "Admin Home",
         exact: true,
         component: AdminHomePage
+    }
+];
+
+export const ROUTES = [
+    {
+        path: "/login",
+        component: LoginPage,
+        name: "Login"
+    },
+    {
+        path: "/signup",
+        component: SignUpPage,
+        name: "Sign Up"
     }
 ];

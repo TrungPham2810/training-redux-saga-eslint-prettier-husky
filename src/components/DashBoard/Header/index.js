@@ -13,6 +13,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import { withRouter } from "react-router";
 import styles from "./styles";
 
 const menuId = "primary-search-account-menu";
@@ -52,6 +53,13 @@ class Header extends Component {
         this.setState({
             anchorEl: null
         });
+    };
+
+    handleLogOut = () => {
+        const { history } = this.props;
+        if (history) {
+            history.push("/login");
+        }
     };
 
     renderMobileMenu() {
@@ -114,13 +122,15 @@ class Header extends Component {
                 open={isMenuOpen}
                 onClose={this.handleMenuClose}
             >
-                <MenuItem onClick={this.handleMenuClose}>Log Out</MenuItem>
+                <MenuItem onClick={this.handleLogOut}>Log Out</MenuItem>
             </Menu>
         );
     };
 
     render() {
         const { classes, name, changeSidebarStatus } = this.props;
+        console.log(this.props);
+
         return (
             <div className={classes.grow}>
                 <AppBar position="static">
@@ -181,4 +191,4 @@ Header.propTypes = {
     changeSidebarStatus: PropTypes.func
 };
 
-export default withStyles(styles)(Header);
+export default withStyles(styles)(withRouter(Header));

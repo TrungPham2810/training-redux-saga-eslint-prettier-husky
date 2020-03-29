@@ -1,28 +1,14 @@
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/core/styles";
-import styles from "./styles";
 import Drawer from "@material-ui/core/Drawer";
-import { ADMIN_ROUTES } from "./../../../constants/index";
-import { Link } from "react-router-dom";
+import { ADMIN_ROUTES } from "../../../constants/index";
+import { NavLink } from "react-router-dom";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import PropTypes from "prop-types";
-import ListItemText from "@material-ui/core/ListItemText";
+import { withStyles } from "@material-ui/core/styles";
+import styles from "./styles";
+
 class SideBar extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            open: true
-        };
-    }
-
-    toggleDrawer = value => {
-        this.setState({
-            open: value
-        });
-    };
-
     renderList = () => {
         const { classes } = this.props;
         let xhtml = null;
@@ -31,16 +17,18 @@ class SideBar extends Component {
                 <List component="div">
                     {ADMIN_ROUTES.map(route => {
                         return (
-                            <ListItem
-                                // selected={true}
+                            <NavLink
+                                to={route.path}
                                 key={route.path}
-                                button
+                                exact={route.exact}
+                                className={classes.link}
+                                activeClassName={classes.menuLinkactive}
                             >
-                                <Link to={route.path}>{route.name}</Link>
-                            </ListItem>
+                                <ListItem className={classes.menuItem} button>
+                                    {route.name}
+                                </ListItem>
+                            </NavLink>
                         );
-
-                        //   <ListItem key={route.path}>{<Link to={route.path}>{route.name}</Link> }</ListItem>
                     })}
                 </List>
             </div>
@@ -48,14 +36,13 @@ class SideBar extends Component {
 
         return xhtml;
     };
+
     render() {
-        const { open } = this.state;
-        const { classes } = this.props;
+        const { classes, showSidebar } = this.props;
         return (
             <Drawer
                 variant="persistent"
-                open={open}
-                onClose={() => this.toggleDrawer(false)}
+                open={showSidebar}
                 classes={{
                     paper: classes.drawerPaper
                 }}
@@ -66,8 +53,9 @@ class SideBar extends Component {
     }
 }
 
-SideBar.propsTypes = {
-    classes: PropTypes.object
+SideBar.propTypes = {
+    classes: PropTypes.object,
+    showSidebar: PropTypes.bool
 };
 
 export default withStyles(styles)(SideBar);

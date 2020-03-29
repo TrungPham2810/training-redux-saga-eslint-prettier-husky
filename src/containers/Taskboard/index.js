@@ -1,23 +1,20 @@
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/core/styles";
-import styles from "./styles";
-import Button from "@material-ui/core/Button";
-import AddIcon from "@material-ui/icons/Add";
-
-import Grid from "@material-ui/core/Grid";
-import { STATUSES } from "../../constants/index";
-
-import TaskList from "../../components/TaskList";
-
-import TaskForm from "../TaskForm";
-import SearchBox from "../../components/SearchBox";
-
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { Box } from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
+import { STATUSES } from "../../constants/index";
+import Button from "@material-ui/core/Button";
+import AddIcon from "@material-ui/icons/Add";
+import Grid from "@material-ui/core/Grid";
+import TaskList from "../../components/TaskList";
+import TaskForm from "../TaskForm";
+import SearchBox from "../../components/SearchBox";
 import * as taskActions from "../../actions/task";
 import * as modalActions from "../../actions/modal";
 import PropTypes from "prop-types";
-import { Box } from "@material-ui/core";
+
+import styles from "./styles";
 
 class Taskboard extends Component {
     componentDidMount() {
@@ -54,6 +51,7 @@ class Taskboard extends Component {
         const { filterTask } = taskActionCreators;
         filterTask(event.target.value);
     };
+
     handleEditTask = task => {
         const { taskActionCreators, modalActionsCreator } = this.props;
         const { setTaskEditing } = taskActionCreators;
@@ -69,6 +67,7 @@ class Taskboard extends Component {
         changeModalTitle("Edit Task");
         changeModalContent(<TaskForm />);
     };
+
     showModalDelete = task => {
         const { modalActionsCreator, classes } = this.props;
 
@@ -116,6 +115,7 @@ class Taskboard extends Component {
         const { deleteTask } = taskActionCreators;
         deleteTask(task.id);
     };
+
     renderBoard() {
         let xhtml = null;
         const { listTask } = this.props;
@@ -180,8 +180,10 @@ Taskboard.propTypes = {
     taskActionCreators: PropTypes.shape({
         fetchResetListTask: PropTypes.func,
         filterTask: PropTypes.func,
-        setTaskEditing: PropTypes.func
+        setTaskEditing: PropTypes.func,
+        deleteTask: PropTypes.func
     }),
+    listTask: PropTypes.array,
     modalActionsCreator: PropTypes.shape({
         showModal: PropTypes.func,
         hideModal: PropTypes.func,

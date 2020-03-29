@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
-import styles from "./styles";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import TaskItem from "./../TaskItem";
 import PropTypes from "prop-types";
+import styles from "./styles";
 class TaskList extends Component {
     render() {
         var {
@@ -23,7 +23,7 @@ class TaskList extends Component {
                 </Box>
 
                 <div className={classes.wrapperListTask}>
-                    {taskFilter.map((task, index) => {
+                    {taskFilter.map(task => {
                         return (
                             <TaskItem
                                 task={task}

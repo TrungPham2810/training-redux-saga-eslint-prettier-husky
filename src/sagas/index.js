@@ -8,10 +8,10 @@ import {
     select,
     takeEvery
 } from "redux-saga/effects";
-import * as taskType from "./../constants/task";
+import * as taskType from "../constants/task";
 
-import { getList, addTask, updateTask, deleteTask } from "./../apis/task";
-import { STATUS_CODE, STATUSES } from "./../constants/index";
+import { getList, addTask, updateTask, deleteTask } from "../apis/task";
+import { STATUS_CODE, STATUSES } from "../constants/index";
 import {
     fetchListTaskSuccess,
     fetchListTaskFalse,
@@ -76,10 +76,7 @@ function* addTaskSaga({ payLoad }) {
         description,
         status: STATUSES[0].value
     });
-
     const { data, status } = resp;
-    console.log("resp", resp);
-
     if (status === STATUS_CODE.CREATED) {
         yield put(hideModal());
         yield put(addTaskSuccess(resp.data));
@@ -113,8 +110,6 @@ function* deleteTaskSaga({ payLoad }) {
     yield put(showLoading());
     const resp = yield call(deleteTask, id);
     const { data, status: statusCode } = resp;
-    console.log(resp);
-
     if (statusCode === STATUS_CODE.SUCCESS) {
         // dispatch action fetchListTaskSuccess
         yield put(hideModal());

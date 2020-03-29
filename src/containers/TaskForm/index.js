@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
 import { Grid } from "@material-ui/core";
-import styles from "./styles";
-import { withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { bindActionCreators, compose } from "redux";
-import * as modalActions from "./../../actions/modal";
+import * as modalActions from "../../actions/modal";
 import { Field, reduxForm } from "redux-form";
-import renderTextField from "./../../components/FormHelper/TextField";
-import renderSelectField from "./../../components/FormHelper/Select";
+import renderTextField from "../../components/FormHelper/TextField";
+import renderSelectField from "../../components/FormHelper/Select";
 import validate from "./validate";
-import * as taskActions from "./../../actions/task";
+import * as taskActions from "../../actions/task";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import styles from "./styles";
+import { withStyles } from "@material-ui/core/styles";
 
 toast.configure({
     draggable: false
@@ -73,6 +73,7 @@ class TaskForm extends Component {
 
         return xhtml;
     };
+
     render() {
         const {
             modalActionsCreator,
@@ -144,10 +145,14 @@ TaskForm.propTypes = {
         hideModal: PropTypes.func
     }),
     taskActionsCreator: PropTypes.shape({
-        addTask: PropTypes.func
+        addTask: PropTypes.func,
+        updateTask: PropTypes.func
     }),
     initialize: PropTypes.func,
-    taskEditing: PropTypes.object
+    taskEditing: PropTypes.object,
+    handleSubmit: PropTypes.func,
+    invalid: PropTypes.bool,
+    submitting: PropTypes.bool
 };
 
 const mapStateToProps = (state, ownProps) => {

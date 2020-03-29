@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/core/styles";
-import styles from "./styles";
 import { Route } from "react-router-dom";
 import DashBoard from "../../../components/DashBoard";
 import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import styles from "./styles";
 class AdminLayoutRoute extends Component {
     render() {
         const { path, component: YourComponent, exact, name } = this.props;
@@ -13,7 +13,9 @@ class AdminLayoutRoute extends Component {
                 exact={exact}
                 render={routerProps => {
                     return (
-                        <DashBoard name={name}>{<YourComponent />}</DashBoard>
+                        <DashBoard name={name}>
+                            <YourComponent />
+                        </DashBoard>
                     );
                 }}
             />

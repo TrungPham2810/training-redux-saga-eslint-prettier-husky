@@ -28,7 +28,18 @@ module.exports = {
         "react/jsx-one-expression-per-line": 1,
         "react/jsx-props-no-spreading": 1,
         "react/jsx-indent": 1,
-        "react/jsx-indent-props":1
+        "react/jsx-indent-props": 1,
+        "no-use-before-define": 1,
+        "no-param-reassign": 1,
+        "prefer-destructuring": 1,
+        "no-fallthrough": 1,
+        "react/require-default-props": 1,
+        "react/no-unused-prop-types": 1,
+        "import/no-cycle": 1,
+        "lines-between-class-members": 1,
+        "react/forbid-prop-types": 1,
+        "react/no-array-index-key": 1,
+        "react/jsx-indent-props": 0
     },
     plugins: ["prettier"],
     env: {

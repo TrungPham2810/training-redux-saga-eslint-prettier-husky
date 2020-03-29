@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/core/styles";
-import styles from "./styles";
+
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -10,6 +9,8 @@ import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Grid from "@material-ui/core/Grid";
 import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import styles from "./styles";
 class TaskItem extends Component {
     render() {
         var { task, label, classes, onClickEdit, onClickDelete } = this.props;

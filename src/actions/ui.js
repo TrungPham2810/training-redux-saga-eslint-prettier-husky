@@ -11,3 +11,15 @@ export const hideLoading = () => {
         type: Types.HIDE_LOADING
     };
 };
+
+export const showSidebar = () => {
+    return {
+        type: Types.SHOW_SIDEBAR
+    };
+};
+
+export const hideSidebar = () => {
+    return {
+        type: Types.HIDE_SIDEBAR
+    };
+};

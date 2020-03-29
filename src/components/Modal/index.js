@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import CloseIcon from "@material-ui/icons/Close";
 import { Modal } from "@material-ui/core";
-import styles from "./styles";
 import { connect } from "react-redux";
-import { withStyles } from "@material-ui/core/styles";
 import { bindActionCreators, compose } from "redux";
-import * as modalActions from "./../../actions/modal";
+import * as modalActions from "../../actions/modal";
+import styles from "./styles";
+import { withStyles } from "@material-ui/core/styles";
 
 class CommonModal extends Component {
     render() {

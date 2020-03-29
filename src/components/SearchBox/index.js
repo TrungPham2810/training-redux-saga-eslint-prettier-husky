@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import styles from "./styles";
-import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import PropTypes from "prop-types";
+import styles from "./styles";
+import { withStyles } from "@material-ui/core/styles";
 class SearchBox extends Component {
     render() {
         const { classes, handleChange } = this.props;
@@ -26,7 +26,7 @@ class SearchBox extends Component {
     }
 }
 
-SearchBox.propsTypes = {
+SearchBox.propTypes = {
     classes: PropTypes.object,
     handleChange: PropTypes.func
 };

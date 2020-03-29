@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Provider } from "react-redux";
-import theme from "../../commons/Theme/index";
 import { BrowserRouter, Switch } from "react-router-dom";
 import { withStyles, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import theme from "../../commons/Theme/index";
 import configureStore from "../../redux/configureStore";
 import GlobalLoading from "../../components/GlobalLoading/index";
 import Modal from "../../components/Modal/index";
@@ -29,6 +29,7 @@ class App extends Component {
 
         return xhtml;
     };
+
     render() {
         return (
             <Provider store={store}>

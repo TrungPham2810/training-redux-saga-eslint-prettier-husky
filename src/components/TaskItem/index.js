@@ -11,9 +11,10 @@ import Grid from "@material-ui/core/Grid";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
+
 class TaskItem extends Component {
     render() {
-        var { task, label, classes, onClickEdit, onClickDelete } = this.props;
+        const { task, label, classes, onClickEdit, onClickDelete } = this.props;
         return (
             <Card className={classes.taskItem}>
                 <CardContent>

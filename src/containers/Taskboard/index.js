@@ -3,16 +3,16 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Box } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
-import { STATUSES } from "../../constants/index";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 import Grid from "@material-ui/core/Grid";
+import PropTypes from "prop-types";
+import { STATUSES } from "../../constants/index";
 import TaskList from "../../components/TaskList";
 import TaskForm from "../TaskForm";
 import SearchBox from "../../components/SearchBox";
 import * as taskActions from "../../actions/task";
 import * as modalActions from "../../actions/modal";
-import PropTypes from "prop-types";
 
 import styles from "./styles";
 

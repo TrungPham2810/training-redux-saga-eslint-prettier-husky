@@ -1,4 +1,4 @@
-import * as Types from "./../constants/modal";
+import * as Types from "../constants/modal";
 
 export const showModal = () => {
     return {

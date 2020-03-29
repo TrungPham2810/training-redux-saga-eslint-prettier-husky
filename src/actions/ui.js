@@ -1,4 +1,4 @@
-import * as Types from "./../constants/ui";
+import * as Types from "../constants/ui";
 
 export const showLoading = () => {
     return {

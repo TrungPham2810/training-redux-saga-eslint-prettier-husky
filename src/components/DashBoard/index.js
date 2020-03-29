@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import Header from "./Header";
-import SideBar from "./SideBar";
 import { connect } from "react-redux";
 import { bindActionCreators, compose } from "redux";
-import * as uiActions from "../../actions/ui";
 import cn from "classnames";
 import Proptypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import * as uiActions from "../../actions/ui";
+import SideBar from "./SideBar";
+import Header from "./Header";
 import styles from "./styles";
+
 class DashBoard extends Component {
     changeSidebarStatus = () => {
         const { showSidebar: sideBarStatus, uiActionsCreator } = this.props;

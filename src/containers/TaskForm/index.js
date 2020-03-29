@@ -5,16 +5,16 @@ import Box from "@material-ui/core/Box";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { bindActionCreators, compose } from "redux";
-import * as modalActions from "../../actions/modal";
 import { Field, reduxForm } from "redux-form";
+import { toast } from "react-toastify";
+import { withStyles } from "@material-ui/core/styles";
+import * as modalActions from "../../actions/modal";
 import renderTextField from "../../components/FormHelper/TextField";
 import renderSelectField from "../../components/FormHelper/Select";
 import validate from "./validate";
 import * as taskActions from "../../actions/task";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./styles";
-import { withStyles } from "@material-ui/core/styles";
 
 toast.configure({
     draggable: false

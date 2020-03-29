@@ -1,6 +1,7 @@
-import axiosService from "./../commons/axiosService";
-import { API_URL } from "./../constants/index";
 import qs from "query-string";
+import axiosService from "../commons/axiosService";
+import { API_URL } from "../constants/index";
+
 const url = "task";
 // http://localhost:3000/task    GET
 export const getList = (params = {}) => {

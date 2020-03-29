@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import DashBoard from "../../../components/DashBoard";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import DashBoard from "../../../components/DashBoard";
 import styles from "./styles";
+
 class AdminLayoutRoute extends Component {
     render() {
         const { path, component: YourComponent, exact, name } = this.props;

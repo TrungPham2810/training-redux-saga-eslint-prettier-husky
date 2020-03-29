@@ -4,9 +4,9 @@ import CloseIcon from "@material-ui/icons/Close";
 import { Modal } from "@material-ui/core";
 import { connect } from "react-redux";
 import { bindActionCreators, compose } from "redux";
+import { withStyles } from "@material-ui/core/styles";
 import * as modalActions from "../../actions/modal";
 import styles from "./styles";
-import { withStyles } from "@material-ui/core/styles";
 
 class CommonModal extends Component {
     render() {

@@ -36,7 +36,7 @@ import { showLoading, hideLoading } from "../actions/ui";
 function* watchFetchListTaskAction() {
     while (true) {
         const action = yield take(taskType.FETCH_TASK_RESET);
-        const params = action.payLoad.params;
+        const { params } = action.payLoad;
         yield put(showLoading());
         const res = yield call(getList, params);
         const { data, status } = res;

@@ -1,5 +1,6 @@
-import AdminHomePage from "./../containers/AdminHomePage";
+import AdminHomePage from "../containers/AdminHomePage";
 import Taskboard from "../containers/Taskboard";
+
 export const API_URL = "http://localhost:3000";
 export const STATUSES = [
     {

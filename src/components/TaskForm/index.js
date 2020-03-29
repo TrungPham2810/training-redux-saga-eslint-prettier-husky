@@ -6,9 +6,10 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import TextField from "@material-ui/core/TextField";
 import PropTypes from "prop-types";
+
 class TaskForm extends Component {
     render() {
-        var { open, onClose } = this.props;
+        const { open, onClose } = this.props;
         return (
             <Dialog
                 open={open}

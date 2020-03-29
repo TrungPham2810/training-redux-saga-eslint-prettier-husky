@@ -1,5 +1,5 @@
-import * as Types from "./../constants/task";
-import { STATUSES } from "./../constants/index";
+import * as Types from "../constants/task";
+import { STATUSES } from "../constants/index";
 // import * as taskApis from "./../apis/task";
 
 // export const fetchListTaskRequest = tasks => {

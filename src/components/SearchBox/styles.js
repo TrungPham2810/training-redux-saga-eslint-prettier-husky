@@ -1,10 +1,8 @@
 const styles = () => ({
-    form:{
-
-    },
+    form: {},
     textField: {
-        width:'30%'
+        width: "30%"
     }
-  });
+});
 
-  export default styles;
+export default styles;

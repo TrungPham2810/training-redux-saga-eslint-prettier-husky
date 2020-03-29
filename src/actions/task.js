@@ -1,5 +1,5 @@
 import * as Types from "./../constants/task";
-import {STATUSES} from "./../constants/index"
+import { STATUSES } from "./../constants/index";
 // import * as taskApis from "./../apis/task";
 
 // export const fetchListTaskRequest = tasks => {
@@ -130,11 +130,11 @@ export const updateTaskFalse = error => {
     };
 };
 
-export const deleteTask = (id) => {
+export const deleteTask = id => {
     return {
         type: Types.DELETE_TASK,
         payLoad: {
-           id
+            id
         }
     };
 };

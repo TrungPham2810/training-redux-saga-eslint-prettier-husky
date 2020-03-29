@@ -1,35 +1,35 @@
-import axios from 'axios';
+import axios from "axios";
 
 class AxiosService {
     constructor() {
         const instance = axios.create();
         this.instance = instance;
-        axios.interceptors.response.use(this.handleSuccess, this.handleError)
+        axios.interceptors.response.use(this.handleSuccess, this.handleError);
     }
 
-    handleSuccess = (response) => {
+    handleSuccess = response => {
         return response;
-    }
+    };
 
-    handleError = (error) => {
+    handleError = error => {
         return Promise.reject(error);
-    }
+    };
 
     get(url) {
-        return this.instance.get(url)
+        return this.instance.get(url);
     }
 
     post(url, data) {
-        return this.instance.post(url, data)
+        return this.instance.post(url, data);
     }
 
     put(url, data) {
-        return this.instance.put(url, data)
+        return this.instance.put(url, data);
     }
 
     delete(url) {
-        return this.instance.delete(url)
+        return this.instance.delete(url);
     }
 }
 
-export default new AxiosService()
+export default new AxiosService();

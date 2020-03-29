@@ -1,10 +1,10 @@
-const styles = (theme) => ({
+const styles = theme => ({
     wrapper: {
-        display: 'flex',
-        flexDirection:'row'
+        display: "flex",
+        flexDirection: "row"
     },
     content: {
-        width:'100%',
+        width: "100%",
         padding: 10
     }
 });

@@ -1,22 +1,22 @@
 const styles = () => ({
     globalLoading: {
-        position:'fixed',
-        left:0,
-        right:0,
-        top:0,
-        bottom:0,
-        zIndex:99,
-        background:'rgba(0, 0, 0, 0.4)'
+        position: "fixed",
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        zIndex: 99,
+        background: "rgba(0, 0, 0, 0.4)"
     },
     icon: {
-        position:'fixed',
-        marginLeft:'auto',
-        marginRight:'auto',
-        top:'45%',
-        left:0,
-        right:0,
+        position: "fixed",
+        marginLeft: "auto",
+        marginRight: "auto",
+        top: "45%",
+        left: 0,
+        right: 0,
         width: 80
     }
-  });
+});
 
-  export default styles;
+export default styles;

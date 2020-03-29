@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { withStyles } from '@material-ui/core/styles';
-import styles from './styles'
+import React, { Component } from "react";
+import { withStyles } from "@material-ui/core/styles";
+import styles from "./styles";
 
 class AdminHomePage extends Component {
     render() {
@@ -8,8 +8,8 @@ class AdminHomePage extends Component {
             <div>
                 <h1>Welcome AdminHomePage</h1>
             </div>
-        )
+        );
     }
 }
 
-export default withStyles(styles)(AdminHomePage)
+export default withStyles(styles)(AdminHomePage);

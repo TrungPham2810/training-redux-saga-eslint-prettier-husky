@@ -35,7 +35,6 @@ class SideBar extends Component {
                                 // selected={true}
                                 key={route.path}
                                 button
-
                             >
                                 <Link to={route.path}>{route.name}</Link>
                             </ListItem>

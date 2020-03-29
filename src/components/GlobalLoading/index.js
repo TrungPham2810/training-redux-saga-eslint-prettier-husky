@@ -1,24 +1,28 @@
 import React, { Component } from "react";
 import styles from "./styles";
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from "@material-ui/core/styles";
 import loadingIcon from "./../../assets/images/loading.gif";
 import { connect } from "react-redux";
 import { bindActionCreators, compose } from "redux";
 import PropTypes from "prop-types";
-import * as uiActions from './../../actions/ui';
+import * as uiActions from "./../../actions/ui";
 
 class GlobalLoading extends Component {
     render() {
         const { classes, showLoading } = this.props;
         let xhtml = null;
-        if(showLoading) {
+        if (showLoading) {
             xhtml = (
-              <div className={classes.globalLoading}>
-                  <img src={loadingIcon} className={classes.icon} alt="Loading" />
-              </div>
+                <div className={classes.globalLoading}>
+                    <img
+                        src={loadingIcon}
+                        className={classes.icon}
+                        alt="Loading"
+                    />
+                </div>
             );
         }
-        return xhtml
+        return xhtml;
     }
 }
 GlobalLoading.propTypes = {
@@ -37,8 +41,5 @@ const mapDispatchToProps = (dispatch, props) => {
     };
 };
 
-const withConnect = connect(mapStateToProps, mapDispatchToProps)
-export default compose(
-    withStyles(styles),
-    withConnect
-)(GlobalLoading)
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+export default compose(withStyles(styles), withConnect)(GlobalLoading);

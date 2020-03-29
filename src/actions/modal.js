@@ -11,16 +11,16 @@ export const hideModal = () => {
         type: Types.HIDE_MODAL
     };
 };
-export const changeModalTitle = (title) => {
+export const changeModalTitle = title => {
     return {
         type: Types.CHANGE_MODAL_TITLE,
-        payLoad:{
+        payLoad: {
             title
         }
     };
 };
 
-export const changeModalContent = (component) => {
+export const changeModalContent = component => {
     return {
         type: Types.CHANGE_MODAL_CONTENT,
         payLoad: {
@@ -28,4 +28,3 @@ export const changeModalContent = (component) => {
         }
     };
 };
-

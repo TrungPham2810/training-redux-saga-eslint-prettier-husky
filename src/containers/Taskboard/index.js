@@ -7,13 +7,13 @@ import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 import Grid from "@material-ui/core/Grid";
 import PropTypes from "prop-types";
+import HeadsetMicIcon from "@material-ui/icons/HeadsetMic";
 import { STATUSES } from "../../constants/index";
 import TaskList from "../../components/TaskList";
 import TaskForm from "../TaskForm";
 import SearchBox from "../../components/SearchBox";
 import * as taskActions from "../../actions/task";
 import * as modalActions from "../../actions/modal";
-
 import styles from "./styles";
 
 class Taskboard extends Component {
@@ -151,6 +151,7 @@ class Taskboard extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.taskboard}>
+                <HeadsetMicIcon />
                 <Button
                     variant="contained"
                     color="primary"

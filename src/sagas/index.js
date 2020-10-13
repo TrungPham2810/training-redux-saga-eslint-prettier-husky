@@ -35,6 +35,8 @@ import { showLoading, hideLoading } from "../actions/ui";
  */
 function* watchFetchListTaskAction() {
     while (true) {
+        console.log(111);
+
         const action = yield take(taskType.FETCH_TASK_RESET);
         const { params } = action.payLoad;
         yield put(showLoading());
@@ -43,6 +45,8 @@ function* watchFetchListTaskAction() {
 
         if (status === STATUS_CODE.SUCCESS) {
             // dispatch action fetchListTaskSuccess
+            console.log(res);
+
             yield put(fetchListTaskSuccess(res.data));
         } else {
             // dispatch action fetchListTaskFalse

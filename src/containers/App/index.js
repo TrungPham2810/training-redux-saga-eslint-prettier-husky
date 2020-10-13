@@ -10,6 +10,7 @@ import Modal from "../../components/Modal/index";
 import { ADMIN_ROUTES, ROUTES } from "../../constants";
 import AdminLayoutRoute from "../../commons/Layout/AdminLayoutRoute";
 import DefaultLayoutRoute from "../../commons/Layout/DefaultLayoutRoute";
+
 import styles from "./styles";
 
 const store = configureStore();
